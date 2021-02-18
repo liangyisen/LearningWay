@@ -8,21 +8,11 @@
     <artifactId>learning-way</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+
     <modules>
+        <module>java-base</module>
         <module>java-web</module>
     </modules>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.60</version>
-        </dependency>
-    </dependencies>
 </project>
