@@ -11,6 +11,7 @@ public class StaticProxy {
     }
 
     public void enhanceStudy(){
+        System.out.println("test");
         System.out.println("学习前 喝杯水");
 
         action.study();
