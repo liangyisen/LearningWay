@@ -1,7 +1,6 @@
 package com.yisen.shardingjdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.support.json.JSONUtils;
 import org.apache.shardingsphere.api.config.sharding.ShardingRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.TableRuleConfiguration;
 import org.apache.shardingsphere.api.config.sharding.strategy.InlineShardingStrategyConfiguration;
@@ -18,7 +17,7 @@ import java.util.Properties;
 public class Demo {
     public static void main(String[] args) throws SQLException {
         Map<String, DataSource> dataSourceMap = new HashMap<>();
-// 配置第1个数据源
+        // 配置第1个数据源
         DruidDataSource dataSource1 = new DruidDataSource();
         dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
         String ip = "112.125.80.159"; //9
@@ -27,7 +26,7 @@ public class Demo {
         dataSource1.setUsername("root");
         dataSource1.setPassword("root");
         dataSourceMap.put("shardingjdbcDB0", dataSource1);
-// 配置第2个数据源
+        // 配置第2个数据源
         DruidDataSource dataSource2 = new DruidDataSource();
         dataSource2.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource2.setUrl("jdbc:mysql://" + ip + ":3306/shardingjdbcDB1");
