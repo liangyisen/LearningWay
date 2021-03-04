@@ -18,6 +18,7 @@
         <module>java-base</module>
         <module>java-web</module>
         <module>netty</module>
+        <module>shardingjdbc</module>
     </modules>
 
 
