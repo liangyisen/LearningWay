@@ -9,4 +9,7 @@
 
 ## netty `netty模块`
 
-## shardingjdbc `数据库分库分表`
+## shardingjdbc `数据库分库分表` 
+
+
+## seata `分布式事务`
