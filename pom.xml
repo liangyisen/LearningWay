@@ -19,6 +19,7 @@
         <module>java-web</module>
         <module>netty</module>
         <module>shardingjdbc</module>
+        <module>seata</module>
     </modules>
 
 
