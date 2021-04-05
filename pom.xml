@@ -21,6 +21,7 @@
         <module>shardingjdbc</module>
         <module>seata</module>
         <module>distributed-transaction</module>
+        <module>distributed-lock</module>
     </modules>
 
 

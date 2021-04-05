@@ -24,8 +24,8 @@ public class XATransaction {
     }
 
     public static void main(String[] args) throws Exception {
-        String connString1 = "jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";
-        String connString2 = "jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";
+        String connString1 = "jdbc:mysql://localhost:3306/eason?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";
+        String connString2 = "jdbc:mysql://localhost:3306/eason?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false";
         MysqlXADataSource datasource1 = getDatasource(connString1, "root", "root");
         MysqlXADataSource datasource2 = getDatasource(connString2, "root", "root");
         //获取xa事务1
