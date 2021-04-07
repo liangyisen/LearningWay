@@ -1,4 +1,4 @@
-package com.yisen.ditributedLock;
+package com.yisen.ditributedLock.redis;
 
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
