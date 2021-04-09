@@ -22,6 +22,7 @@
         <module>seata</module>
         <module>distributed-transaction</module>
         <module>distributed-lock</module>
+        <module>rocketmq</module>
     </modules>
 
 
