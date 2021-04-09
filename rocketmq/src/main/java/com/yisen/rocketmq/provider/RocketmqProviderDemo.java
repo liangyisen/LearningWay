@@ -30,8 +30,9 @@ public class RocketmqProviderDemo {
             producer.start();
             //发送消息
             for (int i = 0; i < 100; i++) {
-                sendMessage("hello mq" + i);
+                sendMessage("hello mq " + i);
             }
+            producer.shutdown();
         } catch (MQClientException e) {
             System.out.println("MQ：启动ProducerTest生产者失败：" + e.getResponseCode() + e.getErrorMessage());
             throw new RuntimeException(e.getMessage(), e);

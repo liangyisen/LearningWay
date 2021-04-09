@@ -11,7 +11,7 @@ import org.apache.rocketmq.remoting.common.RemotingHelper;
 
 import java.io.UnsupportedEncodingException;
 
-public class RokcetMqConsumer {
+public class RocketMqConsumerPush {
 
     private static final String namesrvAddr = "localhost:9876";
 
@@ -22,7 +22,7 @@ public class RokcetMqConsumer {
     private final DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("consumer1");
 
     public static void main(String[] args) throws MQClientException {
-        RokcetMqConsumer rrokcetMqConsumer = new RokcetMqConsumer();
+        RocketMqConsumerPush rrokcetMqConsumer = new RocketMqConsumerPush();
 
         rrokcetMqConsumer.consumer.setNamesrvAddr(namesrvAddr);
         rrokcetMqConsumer.consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
