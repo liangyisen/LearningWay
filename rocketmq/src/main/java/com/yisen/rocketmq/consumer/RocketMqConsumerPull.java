@@ -2,6 +2,7 @@ package com.yisen.rocketmq.consumer;
 
 import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.consumer.PullResult;
+import org.apache.rocketmq.client.consumer.store.OffsetStore;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.common.message.MessageQueue;
@@ -20,7 +21,7 @@ public class RocketMqConsumerPull {
 
     private final static String TAG_TEST = "TAG_TEST";
 
-    private static final DefaultMQPullConsumer PULL_CONSUMER = new DefaultMQPullConsumer("consumer2");
+    private static final DefaultMQPullConsumer PULL_CONSUMER = new DefaultMQPullConsumer("PULL-consumer");
 
 
     public static void main(String[] args) throws MQClientException {
@@ -28,7 +29,10 @@ public class RocketMqConsumerPull {
         PULL_CONSUMER.setNamesrvAddr(NAMESRV_ADDR);
 
         //设置广播消费模式
-        PULL_CONSUMER.setMessageModel(MessageModel.BROADCASTING);
+//        PULL_CONSUMER.setMessageModel(MessageModel.BROADCASTING);
+        //设置集群消费
+        PULL_CONSUMER.setMessageModel(MessageModel.CLUSTERING);
+
 
         //启动消费端
         PULL_CONSUMER.start();
