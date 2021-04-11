@@ -14,38 +14,38 @@ import java.util.*;
 public class RocketMqConsumerPull {
     private static final Map<MessageQueue, Long> OFFSE_TABLE = new HashMap<>();
 
-    private static final String namesrvAddr = "localhost:9876";
+    private static final String NAMESRV_ADDR = "localhost:9876";
 
     private final static String TOPIC_TEST = "TOPIC_TEST";
 
     private final static String TAG_TEST = "TAG_TEST";
 
-    private static final DefaultMQPullConsumer pullConsumer = new DefaultMQPullConsumer("consumer2");
+    private static final DefaultMQPullConsumer PULL_CONSUMER = new DefaultMQPullConsumer("consumer2");
 
 
     public static void main(String[] args) throws MQClientException {
 
-        pullConsumer.setNamesrvAddr(namesrvAddr);
+        PULL_CONSUMER.setNamesrvAddr(NAMESRV_ADDR);
 
         //设置广播消费模式
-        pullConsumer.setMessageModel(MessageModel.BROADCASTING);
+        PULL_CONSUMER.setMessageModel(MessageModel.BROADCASTING);
 
         //启动消费端
-        pullConsumer.start();
+        PULL_CONSUMER.start();
         //订阅主题
-        Set<MessageQueue> messageQueues = pullConsumer.fetchSubscribeMessageQueues(TOPIC_TEST);
+        Set<MessageQueue> messageQueues = PULL_CONSUMER.fetchSubscribeMessageQueues(TOPIC_TEST);
 
         for (MessageQueue mq : messageQueues) {
             System.out.printf("Consume from the queue: %s%n", mq);
             SINGLE_MQ:
             while (true) {
                 try {
-                    PullResult pullResult = pullConsumer.pullBlockIfNotFound(mq, TAG_TEST, getMessageQueueOffset(mq), 32);
+                    PullResult pullResult = PULL_CONSUMER.pullBlockIfNotFound(mq, TAG_TEST, getMessageQueueOffset(mq), 32);
                     System.out.printf("每次拉取的的结果%s%n", pullResult);
                     System.out.println("                    ");
                     putMessageQueueOffset(mq, pullResult.getNextBeginOffset());
                     List<MessageExt> msgFoundList = pullResult.getMsgFoundList();
-                    if (!msgFoundList.isEmpty())
+                    if (!msgFoundList.isEmpty()) {
                         for (MessageExt messageExt : msgFoundList) {
                             byte[] body = messageExt.getBody();
                             try {
@@ -55,6 +55,7 @@ public class RocketMqConsumerPull {
                                 e.printStackTrace();
                             }
                         }
+                    }
                     switch (pullResult.getPullStatus()) {
                         case FOUND:
                             break;

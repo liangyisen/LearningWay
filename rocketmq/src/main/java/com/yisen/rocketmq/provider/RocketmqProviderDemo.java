@@ -1,7 +1,6 @@
 package com.yisen.rocketmq.provider;
 
 import com.alibaba.fastjson.JSON;
-import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
@@ -11,7 +10,7 @@ import javax.annotation.PreDestroy;
 
 public class RocketmqProviderDemo {
     //nameserver地址
-    private final static String namesrvAddr = "localhost:9876";
+    private final static String NAMESRV_ADDR = "localhost:9876";
 
     private final DefaultMQProducer producer = new DefaultMQProducer("ProducerTest");
 
@@ -20,22 +19,27 @@ public class RocketmqProviderDemo {
     private final static String TAG_TEST = "TAG_TEST";
 
 
+    public static void main(String[] args) {
+        RocketmqProviderDemo rocketmqDemo = new RocketmqProviderDemo();
+        rocketmqDemo.start();
+    }
+
     /**
      * 初始化
      */
     public void start() {
         try {
             System.out.println("MQ：启动ProducerTest生产者");
-            producer.setNamesrvAddr(namesrvAddr);
+            producer.setNamesrvAddr(NAMESRV_ADDR);
             producer.start();
             //发送消息
             for (int i = 0; i < 100; i++) {
                 sendMessage("hello mq " + i);
+                Thread.sleep(5);
             }
-            producer.shutdown();
-        } catch (MQClientException e) {
-            System.out.println("MQ：启动ProducerTest生产者失败：" + e.getResponseCode() + e.getErrorMessage());
-            throw new RuntimeException(e.getMessage(), e);
+//            producer.shutdown();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -78,9 +82,5 @@ public class RocketmqProviderDemo {
         }
     }
 
-    public static void main(String[] args) {
-        RocketmqProviderDemo rocketmqDemo = new RocketmqProviderDemo();
-        rocketmqDemo.start();
-    }
 
 }
