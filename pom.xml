@@ -23,6 +23,7 @@
         <module>distributed-transaction</module>
         <module>distributed-lock</module>
         <module>rocketmq</module>
+        <module>hystrix</module>
     </modules>
 
     <dependencies>
