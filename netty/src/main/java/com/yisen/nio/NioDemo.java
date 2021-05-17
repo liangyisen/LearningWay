@@ -1,19 +1,17 @@
-package com.yisen.netty;
+package com.yisen.nio;
 
 
-import com.yisen.netty.util.ByteBufferUtil;
-import io.netty.buffer.ByteBuf;
+import com.yisen.nio.util.ByteBufferUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
 import java.io.*;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.StandardCharsets;
 
 @Slf4j
-public class Demo {
+public class NioDemo {
     /**
      * 一.简单利用channel和buffer读文件
      */

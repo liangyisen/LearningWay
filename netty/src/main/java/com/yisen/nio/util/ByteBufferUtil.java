@@ -1,4 +1,4 @@
-package com.yisen.netty.util;
+package com.yisen.nio.util;
 
 import io.netty.util.internal.StringUtil;
 
