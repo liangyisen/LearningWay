@@ -18,6 +18,5 @@ public class ThreadLoacltest {
     public static void main(String[] args) {
         ThreadLoacltest threadLoacltest = new ThreadLoacltest();
         threadLoacltest.aaa();
-
     }
 }

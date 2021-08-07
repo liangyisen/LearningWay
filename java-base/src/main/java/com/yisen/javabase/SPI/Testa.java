@@ -7,10 +7,8 @@ public class Testa {
 
     public static void main(String[] args) {
         ServiceLoader<ServiceProviderInterface> load = ServiceLoader.load(ServiceProviderInterface.class);
-
-        Iterator<ServiceProviderInterface> iterator = load.iterator();
-        if (iterator.hasNext()) {
-            iterator.next().hellow();
+        for (ServiceProviderInterface next : load) {
+            next.hellow();
         }
     }
 }

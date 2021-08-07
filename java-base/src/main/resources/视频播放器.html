@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>前端播放m3u8格式视频</title>
+    <link href="https://cdn.bootcss.com/video.js/7.6.5/alt/video-js-cdn.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/video.js/6.6.2/video.js"></script>
+    <!--https://www.bootcdn.cn/videojs-contrib-hls/-->
+    <script src="https://cdn.bootcss.com/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
+
+</head>
+
+<body>
+<div id="inputdiv">
+    请输入视频m3u8链接:
+    <input type="text" id="m3u8_url"/>
+
+    <button id="submit" onclick="script">播放</button>
+</div>
+
+<video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1080" height="708"
+       data-setup='{}'>
+</video>
+</body>
+<script>
+    // videojs 简单使用
+    var myVideo = videojs('myVideo', {
+        bigPlayButton: true,
+        textTrackDisplay: false,
+        posterImage: false,
+        errorDisplay: false,
+
+    });
+    var whereYouAt = myVideo.currentTime();
+
+    document.getElementById("submit").onclick = function () {
+        var value = document.getElementById("m3u8_url").value;
+        myVideo.src([{type: "application/x-mpegURL", src: value}]);
+        myVideo.load();
+        myVideo.play();
+
+    };
+
+</script>
+</html>

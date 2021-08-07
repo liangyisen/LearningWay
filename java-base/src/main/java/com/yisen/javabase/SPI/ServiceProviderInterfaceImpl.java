@@ -8,6 +8,6 @@ public class ServiceProviderInterfaceImpl implements ServiceProviderInterface {
 
     @Override
     public void hellow() {
-        System.out.println("hellow ServiceProviderInterfaceImpl!");
+        System.out.println("jdk spi 加载的实现类1");
     }
 }
