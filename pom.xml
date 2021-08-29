@@ -24,6 +24,7 @@
         <module>distributed-lock</module>
         <module>rocketmq</module>
         <module>hystrix</module>
+        <module>springwebflux</module>
     </modules>
 
     <dependencies>
