@@ -25,6 +25,8 @@
         <module>rocketmq</module>
         <module>hystrix</module>
         <module>springwebflux</module>
+        <module>grpc</module>
+        <module>qlexpress</module>
     </modules>
 
     <dependencies>

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yisen";
+
+
+message HelloWorldRequest{
+  string name = 1;
+}
+
+message HelloWorldRespones{
+  string code = 1;
+}
+
+service HelloWorldRpc{
+  rpc sayhello (HelloWorldRequest) returns(HelloWorldRespones){}
+}
