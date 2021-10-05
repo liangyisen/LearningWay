@@ -27,6 +27,7 @@
         <module>springwebflux</module>
         <module>grpc</module>
         <module>qlexpress</module>
+        <module>byte-bubby</module>
     </modules>
 
     <dependencies>
