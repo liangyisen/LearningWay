@@ -40,6 +40,20 @@
         <mysql.connector.java.version>8.0.23</mysql.connector.java.version>
         <grpc.version>1.40.1</grpc.version>
         <annotations.api.version>6.0.53</annotations.api.version>
+        <fastjson.version>1.2.76</fastjson.version>
+        <guava.version>30.1-jre</guava.version>
+        <lombok.version>1.16.18</lombok.version>
+        <mockito.core.version>3.3.3</mockito.core.version>
+        <netty.all.version>4.1.30.Final</netty.all.version>
+        <logback.classic.version>1.2.3</logback.classic.version>
+        <QLExpress.version>3.2.0</QLExpress.version>
+        <rocketmq.version>4.3.0</rocketmq.version>
+        <seata.core.version>1.4.1</seata.core.version>
+        <sharding.jdbc.core.version>4.0.1</sharding.jdbc.core.version>
+        <shardingsphere.transaction.version>5.0.0-alpha</shardingsphere.transaction.version>
+        <druid.version>1.1.12</druid.version>
+        <junit.version>4.12</junit.version>
+
     </properties>
 
 
@@ -130,48 +144,47 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.76</version>
+                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>30.1-jre</version>
+                <version>${guava.version}</version>
             </dependency>
-            <dependency>
-                <groupId>cn.itlym.shoulder</groupId>
-                <artifactId>lombok</artifactId>
-                <version>0.1</version>
-            </dependency>
+
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>3.3.3</version>
+                <version>${mockito.core.version}</version>
             </dependency>
-
 
             <!--netty-->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
-                <version>4.1.30.Final</version>
+                <version>${netty.all.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
             </dependency>
+
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.2.3</version>
+                <version>${logback.classic.version}</version>
             </dependency>
 
             <!--QLExpress-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>QLExpress</artifactId>
-                <version>3.2.0</version>
+                <version>${QLExpress.version}</version>
             </dependency>
 
 
@@ -179,49 +192,47 @@
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-store</artifactId>
-                <version>4.3.0</version>
+                <version>${rocketmq.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-client</artifactId>
-                <version>4.3.0</version>
+                <version>${rocketmq.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-core</artifactId>
-                <version>1.4.1</version>
+                <version>${seata.core.version}</version>
             </dependency>
-
-
             <!-- https://mvnrepository.com/artifact/org.apache.shardingsphere/sharding-jdbc-core -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>sharding-jdbc-core</artifactId>
-                <version>4.0.1</version>
+                <version>${sharding.jdbc.core.version}</version>
             </dependency>
             <!-- 使用 XA 事务时，需要引入此模块 -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>shardingsphere-transaction-xa-core</artifactId>
-                <version>5.0.0-alpha</version>
+                <version>${shardingsphere.transaction.version}</version>
             </dependency>
             <!-- 使用 BASE 事务时，需要引入此模块 -->
             <dependency>
                 <groupId>org.apache.shardingsphere</groupId>
                 <artifactId>shardingsphere-transaction-base-seata-at</artifactId>
-                <version>5.0.0-alpha</version>
+                <version>${shardingsphere.transaction.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>1.1.12</version>
+                <version>${druid.version}</version>
             </dependency>
 
             <!--junit-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>${junit.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

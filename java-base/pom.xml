@@ -31,7 +31,7 @@
         </dependency>
 
         <dependency>
-            <groupId>cn.itlym.shoulder</groupId>
+            <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
 
