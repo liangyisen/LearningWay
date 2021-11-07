@@ -1,4 +1,4 @@
-package com.yisen.javaweb;
+package com.yisen.javaweb.spitest;
 
 public interface SpringSPITestInterface {
 

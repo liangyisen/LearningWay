@@ -1,2 +1,2 @@
 # consumer
-com.yisen.javaweb.SpringSPITestInterface=com.yisen.javaweb.SpringSPITestInterfaceImpl
+com.yisen.javaweb.spitest.SpringSPITestInterface=com.yisen.javaweb.spitest.SpringSPITestInterfaceImpl
