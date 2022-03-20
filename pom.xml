@@ -28,6 +28,7 @@
         <module>grpc</module>
         <module>qlexpress</module>
         <module>byte-bubby</module>
+        <module>quartz</module>
     </modules>
 
     <properties>
