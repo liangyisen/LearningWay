@@ -9,6 +9,7 @@
     <module>netty</module>
     <module>shardingjdbc</module>
     <module>seata</module>
+    <module>sentinel</module>
     <module>distributed-transaction</module>
     <module>distributed-lock</module>
     <module>rocketmq</module>
@@ -29,6 +30,8 @@
 ## shardingjdbc `数据库分库分表`
 
 ## seata `分布式事务`
+
+## sentinel `分布式流控`
 
 ## spring-webflux React响应式编程
 

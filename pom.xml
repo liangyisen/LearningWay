@@ -20,6 +20,7 @@
         <module>netty</module>
         <module>shardingjdbc</module>
         <module>seata</module>
+        <module>sentinel</module>
         <module>distributed-transaction</module>
         <module>distributed-lock</module>
         <module>rocketmq</module>
@@ -54,6 +55,7 @@
         <shardingsphere.transaction.version>5.0.0-alpha</shardingsphere.transaction.version>
         <druid.version>1.1.12</druid.version>
         <junit.version>4.12</junit.version>
+        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
 
     </properties>
 
@@ -225,6 +227,14 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
