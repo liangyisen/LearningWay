@@ -1,9 +1,9 @@
-package com.yisen.javabase.JUCpack.AtomicLongANDLongAdder;
+package com.yisen.javabase.JUCpack;
 
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.LongAdder;
 
-public class Demo {
+public class LongAdderDemo {
 
     public static void main(String[] args) {
         LongAdder longAdder = new LongAdder();

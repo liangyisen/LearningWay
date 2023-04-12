@@ -2,12 +2,10 @@ package com.yisen.javabase.JUCpack;
 
 import org.junit.Test;
 
-import java.util.concurrent.locks.ReentrantLock;
-
-public class Lock1 {
+public class ReentrantLockDemo {
 
     static int i = 0;
-    ReentrantLock lock = new ReentrantLock();
+    java.util.concurrent.locks.ReentrantLock lock = new java.util.concurrent.locks.ReentrantLock();
 
     @Test
     public void alock() throws InterruptedException {
