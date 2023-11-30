@@ -31,6 +31,7 @@
         <module>byte-bubby</module>
         <module>quartz</module>
         <module>jdbc</module>
+        <module>statemachine</module>
     </modules>
 
     <properties>
