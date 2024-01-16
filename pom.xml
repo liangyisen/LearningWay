@@ -32,6 +32,7 @@
         <module>quartz</module>
         <module>jdbc</module>
         <module>statemachine</module>
+        <module>istio</module>
     </modules>
 
     <properties>
