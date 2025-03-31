@@ -1,7 +1,5 @@
 package com.yisen.javabase.base;
 
-import org.omg.PortableInterceptor.Interceptor;
-
 public class OutterInterClazz {
     private int b = 2;
 
